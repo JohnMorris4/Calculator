@@ -5,8 +5,153 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="525" Width="350">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="ResultLabel" Content="0"
+               Grid.ColumnSpan="4"
+               FontSize="60"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"/>
+        <Button x:Name="ACButton" Content="AC"
+                Grid.Row="1"
+                FontSize="30"
+                Margin="5"/>
+        <Button x:Name="PandMButton" Content="+/-"
+                Grid.Column="1"
+                Grid.Row="1"
+                FontSize="30"
+                Margin="5"/>
+        <Button x:Name="PercentButton" Content="%"
+                Grid.Column="2"
+                Grid.Row="1"
+                FontSize="30"
+                Margin="5"/>
+        <Button x:Name="DivideButton" Content="÷"
+                Grid.Column="3"
+                Grid.Row="1"
+                FontSize="30"
+                Margin="5"
+                Background="OrangeRed"
+                Foreground="White"/>
+        <!--row three-->
+        <Button x:Name="SevenButton" Content="7"
+                Grid.Row="2"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="EightButton" Content="8"
+                Grid.Column="1"
+                Grid.Row="2"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="NineButton" Content="9"
+                Grid.Column="2"
+                Grid.Row="2"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="MultiplyButton" Content="X"
+                Grid.Column="3"
+                Grid.Row="2"
+                FontSize="30"
+                Margin="5"
+                Background="OrangeRed"
+                Foreground="White"/>
+        <Button x:Name="FourButton" Content="4"
+                Grid.Row="3"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="FiveButton" Content="5"
+                Grid.Column="1"
+                Grid.Row="3"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="SixButton" Content="6"
+                Grid.Column="2"
+                Grid.Row="3"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="MinusButton" Content="-"
+                Grid.Column="3"
+                Grid.Row="3"
+                FontSize="30"
+                Margin="5"
+                Background="OrangeRed"
+                Foreground="White"/>
+        <Button x:Name="OneButton" Content="1"
+                Grid.Row="4"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="TwoButton" Content="2"
+                Grid.Column="1"
+                Grid.Row="4"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="ThreeButton" Content="3"
+                Grid.Column="2"
+                Grid.Row="4"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="PlusButton" Content="+"
+                Grid.Column="3"
+                Grid.Row="4"
+                FontSize="30"
+                Margin="5"
+                Background="OrangeRed"
+                Foreground="White"/>
+        <Button x:Name="ZeroButton" Content="0"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Margin="5"
+                FontSize="30"
+                Background="Black"
+                Foreground="White"/>
+
+        <Button x:Name="PeriodButton" Content="."
+                Grid.Column="2"
+                Grid.Row="5"
+                FontSize="30"
+                Margin="5"
+                Background="Black"
+                Foreground="White"/>
+        <Button x:Name="EqualsButton" Content="="
+                Grid.Column="3"
+                Grid.Row="5"
+                FontSize="30"
+                Margin="5"
+                Background="OrangeRed"
+                Foreground="White"/>
+
+
     </Grid>
 </Window>
