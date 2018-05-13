@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="525" Width="350">
-    
+
     <Grid Margin="10" Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -31,7 +31,7 @@
                >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                <Setter Property="CornerRadius" Value="100"/>
+                    <Setter Property="CornerRadius" Value="100"/>
                 </Style>
             </Button.Resources>
         </Button>
@@ -41,22 +41,22 @@
                 Grid.Row="1"
                 Style="{StaticResource topButtons}"
                >
-        <Button.Resources>
-            <Style TargetType="{x:Type Border}">
-                <Setter Property="CornerRadius" Value="100"/>
-            </Style>
-        </Button.Resources>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
         </Button>
         <Button x:Name="PercentButton" Content="%"
                 Grid.Column="2"
                 Grid.Row="1"
                 Style="{StaticResource topButtons}"
                >
-        <Button.Resources>
-            <Style TargetType="{x:Type Border}">
-                <Setter Property="CornerRadius" Value="100"/>
-            </Style>
-        </Button.Resources>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
         </Button>
         <Button x:Name="DivideButton" Content="÷"
                 Click="OperationButtonClick"
@@ -67,8 +67,8 @@
                 >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                <Setter Property="CornerRadius" Value="100"/>
-            </Style>
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
             </Button.Resources>
         </Button>
         <!--row three-->
@@ -218,7 +218,8 @@
                 Click="NumberButton_OnClick"
                 Grid.Row="5"
                 Grid.ColumnSpan="2"
-                Style="{StaticResource numberButtons}"
+                Padding="20 0" HorizontalContentAlignment="Left"
+                Style="{StaticResource numberButtons}" 
                 >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
