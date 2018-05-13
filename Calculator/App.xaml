@@ -4,6 +4,39 @@
              xmlns:local="clr-namespace:Calculator"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <SolidColorBrush x:Key="numbersColor" Color="#FF2B2929"/>
+        <SolidColorBrush x:Key="numbersTextColor" Color="White"/>
+        <SolidColorBrush x:Key="operatorBackColor" Color="OrangeRed"/>
+        <SolidColorBrush x:Key="mainText" Color="Black"/>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Button" x:Key="topButtons">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Button" x:Key="numberButtons">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="{StaticResource numbersColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource numbersTextColor}"/>
+        </Style>
+        <Style TargetType="Button" x:Key="operatorButtons">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="{StaticResource operatorBackColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource numbersTextColor}"/>
+        </Style>
+        
     </Application.Resources>
 </Application>

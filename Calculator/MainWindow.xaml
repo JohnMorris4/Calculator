@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="525" Width="350">
-    <Grid Margin="10">
+    
+    <Grid Margin="10" Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -23,135 +24,232 @@
         </Grid.RowDefinitions>
         <Label x:Name="ResultLabel" Content="0"
                Grid.ColumnSpan="4"
-               FontSize="60"
-               HorizontalAlignment="Right"
-               VerticalAlignment="Bottom"/>
-        <Button x:Name="ACButton" Content="AC"
+               />
+        <Button x:Name="ACButton"  Content="AC"
                 Grid.Row="1"
-                FontSize="30"
-                Margin="5"/>
+                Style="{StaticResource topButtons}"
+               >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
         <Button x:Name="PandMButton" Content="+/-"
                 Grid.Column="1"
                 Grid.Row="1"
-                FontSize="30"
-                Margin="5"/>
+                Style="{StaticResource topButtons}"
+               >
+        <Button.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="100"/>
+            </Style>
+        </Button.Resources>
+        </Button>
         <Button x:Name="PercentButton" Content="%"
                 Grid.Column="2"
                 Grid.Row="1"
-                FontSize="30"
-                Margin="5"/>
+                Style="{StaticResource topButtons}"
+               >
+        <Button.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="100"/>
+            </Style>
+        </Button.Resources>
+        </Button>
         <Button x:Name="DivideButton" Content="÷"
+                Click="OperationButtonClick"
                 Grid.Column="3"
                 Grid.Row="1"
-                FontSize="30"
-                Margin="5"
-                Background="OrangeRed"
-                Foreground="White"/>
+                Style="{StaticResource operatorButtons}"
+               
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="100"/>
+            </Style>
+            </Button.Resources>
+        </Button>
         <!--row three-->
-        <Button x:Name="SevenButton" Content="7"
+        <Button x:Name="SevenButton"  Content="7"
+                Click="NumberButton_OnClick"
                 Grid.Row="2"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+               
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="EightButton" Content="8"
+                Click="NumberButton_OnClick"
                 Grid.Column="1"
                 Grid.Row="2"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="NineButton" Content="9"
+                Click="NumberButton_OnClick"
                 Grid.Column="2"
                 Grid.Row="2"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="MultiplyButton" Content="X"
+                Click="OperationButtonClick"
                 Grid.Column="3"
                 Grid.Row="2"
-                FontSize="30"
-                Margin="5"
-                Background="OrangeRed"
-                Foreground="White"/>
+                Style="{StaticResource operatorButtons}"
+               >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="FourButton" Content="4"
+                Click="NumberButton_OnClick"
                 Grid.Row="3"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="FiveButton" Content="5"
+                Click="NumberButton_OnClick"
                 Grid.Column="1"
                 Grid.Row="3"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="SixButton" Content="6"
+                Click="NumberButton_OnClick"
                 Grid.Column="2"
                 Grid.Row="3"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="MinusButton" Content="-"
+                Click="OperationButtonClick"
                 Grid.Column="3"
                 Grid.Row="3"
-                FontSize="30"
-                Margin="5"
-                Background="OrangeRed"
-                Foreground="White"/>
+                Style="{StaticResource operatorButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="OneButton" Content="1"
+                Click="NumberButton_OnClick"
                 Grid.Row="4"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+               >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="TwoButton" Content="2"
+                Click="NumberButton_OnClick"
                 Grid.Column="1"
                 Grid.Row="4"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="ThreeButton" Content="3"
+                Click="NumberButton_OnClick"
                 Grid.Column="2"
                 Grid.Row="4"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="PlusButton" Content="+"
+                Click="OperationButtonClick"
                 Grid.Column="3"
                 Grid.Row="4"
-                FontSize="30"
-                Margin="5"
-                Background="OrangeRed"
-                Foreground="White"/>
+                Style="{StaticResource operatorButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="ZeroButton" Content="0"
+                Click="NumberButton_OnClick"
                 Grid.Row="5"
                 Grid.ColumnSpan="2"
-                Margin="5"
-                FontSize="30"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button x:Name="PeriodButton" Content="."
+                Click="PeriodButton_OnClick"
                 Grid.Column="2"
                 Grid.Row="5"
-                FontSize="30"
-                Margin="5"
-                Background="Black"
-                Foreground="White"/>
+                Style="{StaticResource numberButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="EqualsButton" Content="="
                 Grid.Column="3"
                 Grid.Row="5"
-                FontSize="30"
-                Margin="5"
-                Background="OrangeRed"
-                Foreground="White"/>
-
+                Style="{StaticResource operatorButtons}"
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>
